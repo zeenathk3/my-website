@@ -1,0 +1,40 @@
+<!-- Add this inside your <body> tag -->
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px;">
+  <!-- Button 1: Alert -->
+  <button onclick="showAlert()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+    🔔 Alert
+  </button>
+
+  <!-- Button 2: Open Link -->
+  <button onclick="openLink()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+    🌐 Visit Website
+  </button>
+
+  <!-- Button 3: Toggle Text -->
+  <button onclick="toggleText()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+    📝 Toggle Text
+  </button>
+</div>
+
+<!-- Hidden text for toggle button -->
+<p id="hiddenText" style="display:none; font-size: 16px; margin-left: 20px;">Hello! You toggled me!</p>
+
+<script>
+  function showAlert() {
+    alert("This is an alert from your button!");
+  }
+
+  function openLink() {
+    window.open("https://www.example.com", "_blank");
+  }
+
+  function toggleText() {
+    const text = document.getElementById("hiddenText");
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
+</script>
